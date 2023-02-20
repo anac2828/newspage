@@ -1,0 +1,17 @@
+@mixin displayFlex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin displayFlex($gap-size) {
+  display: flex;
+  gap: $gap-size;
+}
+
+@mixin activeState($color) {
+  &__link:hover,
+  &__link:active {
+    color: $color;
+  }
+}

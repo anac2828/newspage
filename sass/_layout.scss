@@ -1,0 +1,57 @@
+.container {
+  max-width: 90%;
+  margin-inline: auto;
+}
+
+.header {
+  @include displayFlex-center;
+  &__logo {
+    width: 6.5rem;
+  }
+  margin-block: $size-200;
+}
+
+.content {
+  display: grid;
+  column-gap: $size-200;
+  row-gap: $size-300;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: 50rem) {
+    grid-template-columns: 2fr 1fr;
+  }
+  // grid-auto-flow: row;
+}
+
+.lead {
+  // grid-area: lead;
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+  gap: $size-175;
+
+  &__img {
+    background-image: url(../images/image-web-3-mobile.jpg);
+    background-size: cover;
+
+    @media only screen and (min-width: 50em) {
+      background-image: url(../images/image-web-3-desktop.jpg);
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: $size-175;
+  }
+}
+
+.upcoming {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: $size-200;
+
+  &__list {
+    @include displayFlex($size-300);
+  }
+}

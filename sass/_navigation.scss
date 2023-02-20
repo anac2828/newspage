@@ -1,0 +1,20 @@
+.nav {
+  &__btn {
+    background-color: $clr-neutral-100;
+    border: none;
+  }
+  display: none;
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: $size-300;
+  }
+
+  &__Link:link,
+  &__link:visited {
+    color: inherit;
+    transition: all 0.3s;
+  }
+
+  @include activeState($clr-primary);
+}
